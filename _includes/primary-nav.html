@@ -1,0 +1,27 @@
+<header>
+	<img src="{{ site.baseurl }}/img/text-logo.svg">
+
+	<nav>
+		<ul>
+			<li class="nav-item top-level {% if page.url == '/' or page.url contains '/guide/' %}current{% endif %}">
+				<a href="{{ site.baseurl }}/">Getting Started Guide</a>
+				{% assign guide_items = site.guide | sort: 'order' %}
+				{% include secondary-nav-items.html items=guide_items %}
+			</li>
+			<li class="nav-item top-level {% if page.url contains '/tutorials/' %}current{% endif %}">
+				<a href="{{ site.baseurl }}{{ site.tutorials.first.url}}">Tips & Tutorials</a>
+				{% include secondary-nav-items.html items=site.tutorials %}
+			</li>
+			<li class="nav-item top-level {% if page.url contains '/examples/' %}current{% endif %}">
+				<a href="{{ site.baseurl }}/examples/">Examples</a>
+				{% assign example_items = site.examples | sort: 'order' %}
+				{% include secondary-nav-items.html items=example_items %}
+			</li>
+		</ul>
+
+		<p class="maintained">
+			Proudly maintained by
+			<a target="_blank" href="http://cloudcannon.com"><img src="http://cloudcannon.com/img/logo.png"alt="CloudCannon"></a>
+		</p>
+	</nav>
+</header>

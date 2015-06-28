@@ -1,0 +1,43 @@
+# Site settings
+title: Terminality
+email: shadowlightwolf89@gmail.com
+description: "A guide to Linux Terminal"
+baseurl: "/terminality" # the subpath of your site, e.g. /blog
+url: "http://wolfenshadows.github.io/terminality/" # the base hostname & protocol for your site
+twitter_username: shadowlightwolf
+github_username:  shadowlightwolf89
+destination: ../pages
+
+# Build settings
+markdown: kramdown
+
+google_analytics_id:
+collections:
+  examples:
+    name: Examples
+    output: true
+    permalink: "/:collection/:title/"
+  tutorials:
+    name: Tips & Tutorials
+    output: true
+    permalink: "/:collection/:title/"
+  guide:
+    name: Getting Started Guide
+    output: true
+    permalink: "/:collection/:title/"
+defaults:
+  - scope:
+      path: ""
+      type: tutorials
+    values:
+      layout: docs
+  - scope:
+      path: ""
+      type: guide
+    values:
+      layout: docs
+  - scope:
+      path: ""
+      type: examples
+    values:
+      layout: docs
