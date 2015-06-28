@@ -8,6 +8,8 @@ layout: default
 {% elsif page.url contains '/tutorials/' %}
 	{% assign section = 'Tutorials' %}
 	{% assign items = site.tutorials %}
+{% elsif page.url contains '/services/' %}
+	{% assign section = 'Services' %}
 {% endif %}
 
 <section class="main">

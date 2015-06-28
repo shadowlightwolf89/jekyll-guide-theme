@@ -1,43 +1,23 @@
 # Site settings
-title: Terminality
-email: shadowlightwolf89@gmail.com
-description: "A guide to Linux Terminal"
-baseurl: "/terminality" # the subpath of your site, e.g. /blog
-url: "http://wolfenshadows.github.io/terminality/" # the base hostname & protocol for your site
-twitter_username: shadowlightwolf
-github_username:  shadowlightwolf89
-destination: ../pages
-
-# Build settings
-markdown: kramdown
+title: Jekyll Guide Theme
+email:
+description: "A Jekyll theme in the style of documentation."
+baseurl: "/jekyll-guide-theme" # the subpath of your site, e.g. /blog
+url: "http://wolfenshadows.github.io/jekyll-guide-theme/" # the base hostname & protocol for your site
+twitter_username:
+github_username:
+disqus_username:
 
 google_analytics_id:
 collections:
-  examples:
-    name: Examples
-    output: true
-    permalink: "/:collection/:title/"
-  tutorials:
-    name: Tips & Tutorials
-    output: true
-    permalink: "/:collection/:title/"
-  guide:
-    name: Getting Started Guide
+  collection:
+    name: Collection
     output: true
     permalink: "/:collection/:title/"
 defaults:
   - scope:
       path: ""
-      type: tutorials
+      type: collection1
     values:
       layout: docs
-  - scope:
-      path: ""
-      type: guide
-    values:
-      layout: docs
-  - scope:
-      path: ""
-      type: examples
-    values:
-      layout: docs
+url: http://jekyll.tips
